@@ -1,5 +1,8 @@
 package com.sebastien;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -25,7 +28,8 @@ public class TwoSumTest {
     static Collection parameters() {
         return Arrays.asList(new Object[][] {
                 // input, target, expectedIndices
-                {new int[] {2, 7, 11, 15}, 9, new int[] {0, 1}}
+                {new int[] {2, 7, 11, 15}, 9, new int[] {0, 1}},
+                {new int[] {2, 7, 4, 8, 7, 6}, 10, new int[] {0, 3}}
         });
     }
 

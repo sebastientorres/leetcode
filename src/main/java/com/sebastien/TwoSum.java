@@ -7,20 +7,17 @@ public class TwoSum {
 
         boolean found = false;
 
-        for (int i = 0 ; i < nums.length; i++) {
-            for (int k = 1; k < nums.length; k++) {
+        for (int i = 0; i < nums.length && !found; i++) {
+            for (int j = i+1; j< nums.length; j++) {
                 int a = nums[i];
-                int b = nums[k];
+                int b = nums[j];
 
-                if (a + b == target) {
+                if(a+b == target) {
                     results[0] = i;
-                    results[1] = k;
+                    results[1] = j;
                     found = true;
                     break;
                 }
-            }
-            if (found) {
-                break;
             }
         }
 
